@@ -1,0 +1,36 @@
+diff a/Section_2/S_2_1.py b/Section_2/S_2_1.py	(rejected hunks)
+@@ -0,0 +1,34 @@
++
++import sys
++sys.stdin=open("input.txt","rt")
++
++# �� Ǯ��
++# N, K = map(int, input().split())
++# q=[]
++
++# for i in range(1, N+1):
++#     if N%i==0:
++#         q.append(i)
++
++# if k-1 <= len(q):
++#     print(q[K-1])
++# else :
++#     print(-1)
++
++## range���� ������ �߸��Ͽ���! 
++## for else ������ ����ϸ� ���� ����Ʈ�� ���� �ʿ䰡 ����
++## ������ 1���� ���ڰ� ������������̱� ������ ���׳� �ϸ�� 
++
++#���� Ǯ��
++n, k = map(int, input().split())
++cnt=0
++for i in range(1, n+1):
++    if n%i==0:
++        cnt+=1
++    if cnt==k:
++        print(i)
++        break
++else:
++    print(-1)
++
++# ���������� ������ else ����, k��°�� ã���� break�� 
